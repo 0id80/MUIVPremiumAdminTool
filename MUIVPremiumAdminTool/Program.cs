@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,16 @@ namespace MUIVPremiumAdminTool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-        }
+
+            string filePath = "W:\\VS_Projects\\MUIVPremiumAdminTool\\settings.txt";
+            if (!(File.Exists(filePath)))
+            {
+                Application.Run(new RegisterForm());
+            }
+            else
+            {
+                Application.Run(new MainForm());
+            }
+            }
     }
 }

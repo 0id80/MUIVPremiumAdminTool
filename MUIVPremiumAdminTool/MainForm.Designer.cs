@@ -1,4 +1,6 @@
-﻿namespace MUIVPremiumAdminTool
+﻿using System.Drawing;
+
+namespace MUIVPremiumAdminTool
 {
     partial class MainForm
     {
@@ -66,7 +68,8 @@
             // 
             // ADSearchPage
             // 
-            this.ADSearchPage.BackColor = System.Drawing.Color.Transparent;
+            this.ADSearchPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ADSearchPage.ForeColor = System.Drawing.Color.Black;
             this.ADSearchPage.Location = new System.Drawing.Point(4, 22);
             this.ADSearchPage.Name = "ADSearchPage";
             this.ADSearchPage.Padding = new System.Windows.Forms.Padding(3);
@@ -77,6 +80,7 @@
             // HRDepartmentPage
             // 
             this.HRDepartmentPage.Controls.Add(this.HRDepartamentControl);
+            this.HRDepartmentPage.ForeColor = System.Drawing.Color.White;
             this.HRDepartmentPage.Location = new System.Drawing.Point(4, 22);
             this.HRDepartmentPage.Name = "HRDepartmentPage";
             this.HRDepartmentPage.Padding = new System.Windows.Forms.Padding(3);
@@ -169,7 +173,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.tabControl);
-            this.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(500, 700);
             this.Name = "MainForm";
