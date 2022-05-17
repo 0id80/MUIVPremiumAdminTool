@@ -18,7 +18,7 @@ namespace MUIVPremiumAdminTool
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string filePath = "W:\\VS_Projects\\MUIVPremiumAdminTool\\settings.txt";
+            string filePath = "C:\\MUIVPremiumAdminTool\\settings.txt";
             if (!(File.Exists(filePath)))
             {
                 Application.Run(new RegisterForm());
