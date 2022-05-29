@@ -58,22 +58,22 @@ namespace MUIVPremiumAdminTool
         // Методы отвечающие за отключение фокуса на вкладках
         private void tabControl_Click(object sender, EventArgs e)
         {
-            (sender as TabControl).SelectedTab.Focus();
+            //(sender as TabControl).SelectedTab.Focus();
         }
 
         private void tabControl_Enter(object sender, EventArgs e)
         {
-            (sender as TabControl).SelectedTab.Focus();
+            //(sender as TabControl).SelectedTab.Focus();
         }
 
         private void HRDepartamentControl_Click(object sender, EventArgs e)
         {
-            (sender as TabControl).SelectedTab.Focus();
+            //(sender as TabControl).SelectedTab.Focus();
         }
 
         private void HRDepartamentControl_Enter(object sender, EventArgs e)
         {
-            (sender as TabControl).SelectedTab.Focus();
+            //(sender as TabControl).SelectedTab.Focus();
         }
     }
 }
