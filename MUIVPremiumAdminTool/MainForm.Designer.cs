@@ -104,7 +104,7 @@ namespace MUIVPremiumAdminTool
             this.hrDeptTabControl.Location = new System.Drawing.Point(-4, 0);
             this.hrDeptTabControl.Name = "hrDeptTabControl";
             this.hrDeptTabControl.SelectedIndex = 0;
-            this.hrDeptTabControl.Size = new System.Drawing.Size(491, 640);
+            this.hrDeptTabControl.Size = new System.Drawing.Size(492, 640);
             this.hrDeptTabControl.TabIndex = 0;
             this.hrDeptTabControl.TabStop = false;
             this.hrDeptTabControl.Click += new System.EventHandler(this.hrDeptTabControl_Click);
@@ -116,7 +116,7 @@ namespace MUIVPremiumAdminTool
             this.generalPage.Location = new System.Drawing.Point(4, 25);
             this.generalPage.Name = "generalPage";
             this.generalPage.Padding = new System.Windows.Forms.Padding(3);
-            this.generalPage.Size = new System.Drawing.Size(483, 611);
+            this.generalPage.Size = new System.Drawing.Size(484, 611);
             this.generalPage.TabIndex = 0;
             this.generalPage.Text = "Москвичи";
             // 
@@ -126,7 +126,7 @@ namespace MUIVPremiumAdminTool
             this.branchesPage.Location = new System.Drawing.Point(4, 25);
             this.branchesPage.Name = "branchesPage";
             this.branchesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.branchesPage.Size = new System.Drawing.Size(483, 611);
+            this.branchesPage.Size = new System.Drawing.Size(484, 611);
             this.branchesPage.TabIndex = 1;
             this.branchesPage.Text = "ЗаМКАДыши";
             // 
@@ -182,7 +182,7 @@ namespace MUIVPremiumAdminTool
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(500, 700);
             this.Name = "mainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MUIVPremiumAdminTool";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
@@ -210,4 +210,3 @@ namespace MUIVPremiumAdminTool
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuButton;
     }
 }
-

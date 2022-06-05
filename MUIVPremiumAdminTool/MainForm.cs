@@ -19,9 +19,22 @@ namespace MUIVPremiumAdminTool
             InitializeComponent();
         }
 
-        // Метод загрузки формы
+        // Метод перед загрузкой формы
         private void mainForm_Load(object sender, EventArgs e)
         {
+            //DrawItemEventArgs.DrawFocusRectangle = 
+            if (File.Exists($"C:/Users/{Environment.UserName}/AppData/Local/MUIVPremiumAdminTool/config.json"))
+            {
+                MessageBox.Show("Yes");
+            } else
+            {
+                this.mainTabControl.SelectedTab = this.settingsPage;
+                //string text = "test";
+                //string en = Encryptor.Encrypt(text);
+                //string de = Encryptor.Decrypt(en);
+                //MessageBox.Show($"{text}\n{en}\n{de}");
+                //Добавить создание конфиг файла по умолчанию
+            }
         }
 
         //Сворачивание в трей
