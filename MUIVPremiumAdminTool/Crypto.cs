@@ -7,30 +7,47 @@ using System.Globalization;
 
 namespace Crypto
 {
-    //add seeds and sailt (don't drop keys and sipher)
     public class Encryptor
     {
+        protected class KeyManager
+        {
+            private string source_key = @"(cO{e'vpFeWM2i:elu18}(0p[L;k/6E&[NhvhA\pxtB)/>=y3!Hr=GjeS!Z)=!p%";
+            private int init_key;
+            private Random random;
+            private int key_num;
+
+            public KeyManager(int init_num)
+            {
+                init_key = init_num;
+                random = new Random(source_key[init_key % source_key.Length]);
+            }
+
+            public int Next()
+            {
+                key_num++;
+                return random.Next(0, init_key ^ source_key[key_num % source_key.Length]);
+            }
+        }
+
         public static string Encrypt(string text)
         {
-            Random random = new Random();
+            KeyManager key_manager = new KeyManager(text.Length);
             List<string> cipher = new List<string>();
             foreach (char symbol in text)
             {
-                int key = random.Next(0, 10000);
-                cipher.Add($"{(symbol ^ key).ToString("X")}:{key.ToString("X")}");
+                cipher.Add((symbol ^ key_manager.Next()).ToString("X"));
             }
-            return string.Join("|", cipher);
+            return string.Join(":", cipher);
         }
 
         public static string Decrypt(string cipher)
         {
+            string[] cipher_list = cipher.Split(':');
+            KeyManager key_manager = new KeyManager(cipher_list.Length);
             List<char> text = new List<char>();
-            foreach (string cipher_block in cipher.Split('|'))
+            foreach (string encrypted_char in cipher_list)
             {
-                List<string> cipher_block_sliced = cipher_block.Split(':').Take(2).ToList();
-                int value = int.Parse(cipher_block_sliced[0], NumberStyles.HexNumber);
-                int key = int.Parse(cipher_block_sliced[1], NumberStyles.HexNumber);
-                text.Add((char)(value ^ key));
+                text.Add((char)(int.Parse(encrypted_char, NumberStyles.HexNumber) ^ key_manager.Next()));
             }
             return string.Join("", text);
         }
