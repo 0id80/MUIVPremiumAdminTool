@@ -35,9 +35,6 @@ namespace MUIVPremiumAdminTool
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.adSearchPage = new System.Windows.Forms.TabPage();
             this.hrDeptPage = new System.Windows.Forms.TabPage();
-            this.hrDeptTabControl = new System.Windows.Forms.TabControl();
-            this.generalPage = new System.Windows.Forms.TabPage();
-            this.branchesPage = new System.Windows.Forms.TabPage();
             this.informationPage = new System.Windows.Forms.TabPage();
             this.settingsPage = new System.Windows.Forms.TabPage();
             this.saveSettingsButton = new System.Windows.Forms.Button();
@@ -50,8 +47,6 @@ namespace MUIVPremiumAdminTool
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.closeToolStripMenuButton = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTabControl.SuspendLayout();
-            this.hrDeptPage.SuspendLayout();
-            this.hrDeptTabControl.SuspendLayout();
             this.settingsPage.SuspendLayout();
             this.notifyContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +86,6 @@ namespace MUIVPremiumAdminTool
             // hrDeptPage
             // 
             this.hrDeptPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.hrDeptPage.Controls.Add(this.hrDeptTabControl);
             this.hrDeptPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.hrDeptPage.Location = new System.Drawing.Point(4, 25);
             this.hrDeptPage.Name = "hrDeptPage";
@@ -99,45 +93,6 @@ namespace MUIVPremiumAdminTool
             this.hrDeptPage.Size = new System.Drawing.Size(484, 636);
             this.hrDeptPage.TabIndex = 1;
             this.hrDeptPage.Text = "Отдел кадров";
-            // 
-            // hrDeptTabControl
-            // 
-            this.hrDeptTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hrDeptTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.hrDeptTabControl.Controls.Add(this.generalPage);
-            this.hrDeptTabControl.Controls.Add(this.branchesPage);
-            this.hrDeptTabControl.Location = new System.Drawing.Point(-4, 0);
-            this.hrDeptTabControl.Name = "hrDeptTabControl";
-            this.hrDeptTabControl.SelectedIndex = 0;
-            this.hrDeptTabControl.Size = new System.Drawing.Size(492, 640);
-            this.hrDeptTabControl.TabIndex = 0;
-            this.hrDeptTabControl.TabStop = false;
-            this.hrDeptTabControl.Click += new System.EventHandler(this.hrDeptTabControl_Click);
-            this.hrDeptTabControl.Enter += new System.EventHandler(this.hrDeptTabControl_Enter);
-            // 
-            // generalPage
-            // 
-            this.generalPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.generalPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.generalPage.Location = new System.Drawing.Point(4, 25);
-            this.generalPage.Name = "generalPage";
-            this.generalPage.Padding = new System.Windows.Forms.Padding(3);
-            this.generalPage.Size = new System.Drawing.Size(484, 611);
-            this.generalPage.TabIndex = 0;
-            this.generalPage.Text = "Москвичи";
-            // 
-            // branchesPage
-            // 
-            this.branchesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.branchesPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.branchesPage.Location = new System.Drawing.Point(4, 25);
-            this.branchesPage.Name = "branchesPage";
-            this.branchesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.branchesPage.Size = new System.Drawing.Size(484, 611);
-            this.branchesPage.TabIndex = 1;
-            this.branchesPage.Text = "ЗаМКАДыши";
             // 
             // informationPage
             // 
@@ -271,8 +226,6 @@ namespace MUIVPremiumAdminTool
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.mainTabControl.ResumeLayout(false);
-            this.hrDeptPage.ResumeLayout(false);
-            this.hrDeptTabControl.ResumeLayout(false);
             this.settingsPage.ResumeLayout(false);
             this.settingsPage.PerformLayout();
             this.notifyContextMenuStrip.ResumeLayout(false);
@@ -287,9 +240,6 @@ namespace MUIVPremiumAdminTool
         private System.Windows.Forms.TabPage hrDeptPage;
         private System.Windows.Forms.TabPage informationPage;
         private System.Windows.Forms.TabPage settingsPage;
-        private System.Windows.Forms.TabControl hrDeptTabControl;
-        private System.Windows.Forms.TabPage generalPage;
-        private System.Windows.Forms.TabPage branchesPage;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip notifyContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuButton;

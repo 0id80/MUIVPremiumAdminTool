@@ -91,15 +91,5 @@ namespace MUIVPremiumAdminTool
         {
             (sender as TabControl).SelectedTab.Focus();
         }
-
-        private void hrDeptTabControl_Click(object sender, EventArgs e)
-        {
-            (sender as TabControl).SelectedTab.Focus();
-        }
-
-        private void hrDeptTabControl_Enter(object sender, EventArgs e)
-        {
-            (sender as TabControl).SelectedTab.Focus();
-        }
     }
 }
